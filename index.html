@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Curva da Mudança</title>
+
+<!-- Fontes -->
+<link href="https://fonts.googleapis.com/css2?family=Khand:wght@500;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cor-fundo: #f5f5f5;
+    --cor-fundo-secundaria: #ffffff;
+    --cor-destaque: #263868; /* azul escuro */
+    --cor-texto: #222222;
+    --raio-borda: 14px;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { scroll-behavior: smooth; background-color: var(--cor-fundo); color: var(--cor-texto); font-family: 'Barlow', sans-serif; }
+
+  /* Barra de progresso */
+  #progress-bar { position: fixed; top:0; left:0; width:0%; height:4px; background: var(--cor-destaque); z-index:999; transition: width 0.1s ease-out; }
+
+  /* Cabeçalho */
+  header { padding:50px 20px; text-align:center; background: var(--cor-fundo-secundaria); border-bottom:1px solid rgba(0,0,0,0.1); }
+  header h1 { font-family: 'Khand', sans-serif; font-size:2rem; color: var(--cor-destaque); margin-bottom:10px; }
+  header p { max-width:700px; margin:auto; font-size:1rem; color: #555; }
+
+  /* Conteúdo */
+  main { max-width:850px; margin:40px auto; padding:0 20px 60px; }
+  section { background: var(--cor-fundo-secundaria); padding:25px; border-radius: var(--raio-borda); margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s; }
+  section:hover { transform: translateY(-2px); }
+  h2 { font-family: 'Khand', sans-serif; color: var(--cor-destaque); margin-bottom:12px; }
+  p, li { font-size:0.95rem; line-height:1.5; color: var(--cor-texto); margin-bottom:8px; }
+  ul { padding-left:18px; }
+
+  .btn { display:inline-block; background: var(--cor-fundo-secundaria); color: var(--cor-texto); border:1px solid var(--cor-destaque); border-radius:50px; padding:8px 16px; margin:5px 5px 0 0; font-weight:500; text-decoration:none; transition:0.3s; }
+  .btn:hover { background: var(--cor-destaque); color: var(--cor-fundo-secundaria); }
+
+  .highlight { border-left:3px solid var(--cor-destaque); background: rgba(38,56,104,0.08); padding:12px; border-radius: var(--raio-borda); margin-top:8px; }
+
+  footer { text-align:center; padding:25px; color:#777; font-size:0.85rem; }
+
+  @media (max-width:600px){ header h1{ font-size:1.6rem; } section{ padding:18px; } }
+</style>
+</head>
+
+<body>
+  <div id="progress-bar"></div>
+
+  <header>
+    <h1>A Curva da Mudança</h1>
+    <p>Mudanças mexem com duas variáveis: Moral (energia/confiança) e Competências (o quanto dominamos o novo). Existe um ‘vale’ de adaptação temporário. Após a aceitação, ambas geralmente melhoram.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Materiais de Apoio</h2>
+      <p>Botão 1.1: Vídeo “falado”, curto e rápido com a curva (aceito pelo Solicita).</p>
+      <p>Botão 1.2: “Rota de risco” — quem sai da curva durante crises.</p>
+      <a href="#" class="btn">Ver Vídeo</a>
+      <a href="#" class="btn">Rota de Risco</a>
+    </section>
+
+    <section>
+      <h2>Pausa de 2 minutos</h2>
+      <p>Feche os olhos, respire e pergunte a si mesmo:</p>
+      <p>“O que mudou na minha função e como estou lidando com isso?”</p>
+      <p>Reflita: estou colaborando com o novo ou apenas mantendo o antigo funcionando?</p>
+    </section>
+
+    <section>
+      <h2>Teste rápido de reflexão</h2>
+      <p>Pergunta-chave:</p>
+      <p>“Com as mudanças e automações, o que dentro do meu setor ainda depende de mim e o que já posso simplificar ou automatizar melhor?”</p>
+      <div class="highlight">
+        <p>Anote uma resposta prática e transforme em uma ação de teste.</p>
+        <ul>
+          <li>Exemplo: registrar X direto no sistema, sem planilha.</li>
+          <li>Exemplo: revisar se um fluxo manual pode ser automatizado.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Para quem pedir ajuda</h2>
+      <ul>
+        <li>Líder imediato — remove obstáculos em até 10 minutos.</li>
+        <li>Mentor de pares — dúvidas práticas, mão na massa.</li>
+        <li>Plantão Gente & Gestão — dúvidas sobre entendimento da mudança ou fluxo.</li>
+        <li>Qualidade (POP/Checklist) — dúvidas sobre padrões.</li>
+        <li>TI/Sistemas (Sankhya, PontoTel, PL) — acesso, erros ou telas.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Mensagem pronta para pedir ajuda</h2>
+      <div class="highlight">
+        <p>Assunto: Dúvida prática após meu teste<br>
+        Oi [Nome], fiz uma pausa de 2 minutos e testei [descreva brevemente].<br>
+        Percebi: [resultado].<br>
+        Preciso de orientação rápida sobre [resuma sua dúvida].<br>
+        Pode me ajudar?</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Lembrete – “Saída da Curva”</h2>
+      <ul>
+        <li>Se não testar e apenas comparar com o antigo, ou desanimar o time, você sinaliza saída da curva.</li>
+        <li>Resposta prática: faça pausa de 2 minutos, escolha 1 teste simples e peça ajuda.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Projeto Gestão Ativa</p>
+  </footer>
+
+  <script>
+    window.onscroll = function() {
+      const doc = document.documentElement;
+      const scrollTop = doc.scrollTop;
+      const scrollHeight = doc.scrollHeight - doc.clientHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progress-bar").style.width = progress + "%";
+    };
+  </script>
+</body>
+</html>
